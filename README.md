@@ -1,7 +1,7 @@
 # Backend-Dev-Capstone
 
 ## Description
- 
+
 This is my capstone project of the Meta Back-end developer course. The purpose of the project is to build a RESTful API that allows users of a fictional restaurant to reserve a table from the front-end application of the restaurant.
 
 

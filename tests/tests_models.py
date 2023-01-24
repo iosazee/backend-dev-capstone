@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Booking, Menu
+from restaurant.models import Booking, Menu
 from datetime import datetime
 from decimal import Decimal
 
@@ -34,6 +34,3 @@ class MenuModelTest(TestCase):
         self.assertEqual(vanilla.Price, Decimal('6.99'))
         self.assertEqual(vanilla.Inventory, 99)
 
-
-
-# to do implement test for the views

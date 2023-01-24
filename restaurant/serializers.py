@@ -18,4 +18,5 @@ class MenuSerializer(serializers.ModelSerializer):
 class Userserializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'password', 'groups',]
+        fields = ['url', 'username', 'email', 'groups']
+

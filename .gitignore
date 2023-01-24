@@ -49,5 +49,8 @@ coverage.xml
 manage.py
 .DS_Store
 
-# example database
+# database
 littlelemon
+
+# notes
+notes.txt

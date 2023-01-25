@@ -1,3 +1,9 @@
+# This project was setup with pipenv to manage the dependencies rather than pip.
+So run PIPENV INSTALL (to install all the project's dependencies) after cloning the project
+and pipenv shell to activate the virtual environment. Don't forget to select the python
+interpreter created by pipenv via vs code's command palette and use it as the interpreter.
+
+
 # Users Details Created for this project
 
 ## User 1

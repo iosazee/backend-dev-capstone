@@ -2,6 +2,7 @@ from django.test import TestCase, RequestFactory
 from restaurant.models import Booking, Menu
 from restaurant.views import MenuItemsView, BookingViewSet
 from datetime import datetime
+import pytz
 
 
 class MenuItemViewTest(TestCase):
@@ -23,10 +24,13 @@ class MenuItemViewTest(TestCase):
 class BookingViewTest(TestCase):
 
     def setUp(self):
+        t1 = datetime.strptime('2023-01-31 19:05:00', '%Y-%m-%d %H:%M:%S')
+        london_timezone = pytz.timezone('Europe/London')
+        booking_date = london_timezone.localize(t1)
         Booking.objects.create(
             Name = 'Kieran Malloy',
             No_of_Guests = 4,
-            BookingDate = datetime.now()
+            BookingDate = booking_date
         )
 
     def test_my_view(self):

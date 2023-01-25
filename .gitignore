@@ -46,11 +46,7 @@ coverage.xml
 
 # Developers
 *.sw*
-manage.py
 .DS_Store
-
-# database
-littlelemon
 
 # notes
 notes.txt

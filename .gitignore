@@ -51,3 +51,6 @@ coverage.xml
 # notes
 notes.txt
 README.txt
+
+# secrets
+secrets.json

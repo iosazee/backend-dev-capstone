@@ -27,3 +27,9 @@ interpreter created by pipenv via vs code's command palette and use it as the in
 3. Post request To Logout user and destroy their token http://127.0.0.1:8000/auth/token/logout/
 
 
+#Testing
+## As per the course instructions, the unit tests for the models and views are in a seperate
+tests folder. The location of the tests require a slight modification in the command to run the
+tests. The command in this case is:
+                                python manage.py test tests.
+

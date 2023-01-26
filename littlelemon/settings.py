@@ -10,20 +10,29 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from pathlib import Path
+# from pathlib import Path
+import json
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+try:
+    with open(os.path.join(BASE_DIR, 'secrets.json')) as handle:
+        SECRETS = json.load(handle)
+except IOError:
+    SECRETS = {}
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-nj67!tr7!m8-og@fb^a_5$o0!_4$-lpj2)ic(kazjsp_=#=e_$'
+SECRET_KEY = SECRETS['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = SECRETS['debug']
 
 ALLOWED_HOSTS = []
 
@@ -80,14 +89,12 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Littlelemon',
-        'USER': 'admindjango',
-        'PASSWORD': 'employee@123!',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+        'NAME': SECRETS['db_name'],
+        'USER': SECRETS['db_user'],
+        'PASSWORD': SECRETS['db_password'],
+        'HOST': SECRETS['db_host'],
+        'PORT': SECRETS['db_port'],
+        'OPTIONS': SECRETS['db_options']
     }
 }
 

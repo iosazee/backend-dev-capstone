@@ -21,6 +21,7 @@ This application was built using these technologies and languages:
 1.    Django Web Framework
 2.    Django REST framework
 3.    Python
+4.    MySQL Database 
 
 ## API Endpoints
 ## For models and their views

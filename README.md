@@ -7,20 +7,20 @@ This is my capstone project of the Meta Back-end developer course. The purpose o
 ## Description
 
 This application is a simple REST API that serves as the backend application of a fictional restaurant. It allows different users of the application to do the following:
-    1.  New customers can register by means of a Post http request.
-    2.  An authorized manager can see all the registered users of the application via a Get HTTP request.
-    3.  Any registered user of the app can login and obtain an authorization token or API Key via a Post HTTP request.
-    4. An authorized manager can logout a user and destroy their API Key via a Post HTTP request.
-    5. Registered customers can make a Get HTTP request for all menu-items the restaurant currently has.
-    6. Registered customers can make a Get request for a single menu item.
-    7. Authorized managers can make a Post HTTP request to Post new menu-items to the application database.
-    8. Authorized managers can make a PUT/PATCH/DELETE HTTP request for a single menu item.
-    9. Registerd customers can reserve a table by making a Post request.
+1.  New customers can register by means of a Post http request.
+2.  An authorized manager can see all the registered users of the application via a Get HTTP request.
+3.  Any registered user of the app can login and obtain an authorization token or API Key via a Post HTTP request.
+4.  An authorized manager can logout a user and destroy their API Key via a Post HTTP request.
+5.  Registered customers can make a Get HTTP request for all menu-items the restaurant currently has.
+6.  Registered customers can make a Get request for a single menu item.
+7.  Authorized managers can make a Post HTTP request to Post new menu-items to the application database.
+8.  Authorized managers can make a PUT/PATCH/DELETE HTTP request for a single menu item.
+9.  Registerd customers can reserve a table by making a Post request.
 
 This application was built using these technologies and languages:
-    Django Web Framework
-    Django REST framework
-    Python
+1.    Django Web Framework
+2.    Django REST framework
+3.    Python
 
 ## API Endpoints
 ## For models and their views
